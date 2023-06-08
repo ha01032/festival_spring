@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.example.demo.mapper.BoardMapper">
+  
+  
+  <insert id="BoardWrite">
+  	INSERT INTO Board (board_title, board_contents) VALUES (#{title}, #{contents})
+  </insert>
+  
+  <select id="BoardList">
+  	SELECT * FROM Board
+  </select>
+  
+  
+  <select id="BoardSelect">
+  	SELECT * FROM Board WHERE board_id=#{id}
+  </select>
+  
+  <delete id="BoardDelete">
+  	DELETE FROM Board WHERE board_id=#{id}
+  </delete>
+  
+  </mapper>
